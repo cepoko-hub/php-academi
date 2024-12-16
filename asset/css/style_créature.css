@@ -1,0 +1,105 @@
+/* Style général */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #0a0e27;
+    color: #e0e5ef;
+}
+
+h3 {
+    text-transform: capitalize;
+}
+
+nav {
+    background-color: #1a213d;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    color: #e0e5ef;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #98c1d9;
+}
+
+/* Conteneur des créatures */
+.creature-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Box des créatures */
+.creature-box {
+    background-color: #141a3b;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.creature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.creature-box img {
+    width: 100%;
+    height: 300px;
+    object-fit: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.creature-box h3 {
+    margin: 0 0 10px;
+    color: #e0e5ef;
+}
+
+.creature-box p {
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+.creature-box small {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #a9b3d1;
+}
+
+/* Couleurs selon le type */
+.type-aquatique {
+    border-left: 5px solid #4dabf7;
+}
+
+.type-démonique {
+    border-left: 5px solid #d72638;
+}
+
+.type-mi-bête {
+    border-left: 5px solid #f4a261;
+}
+
+.type-mort-vivant {
+    border-left: 5px solid #0e7a04;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
+}
